@@ -1,0 +1,134 @@
+SOAP (Simple Object Access Protocol) Services**** These webservices can understand the standard.
+
+SOAP services XML only use to send/receive the information/message between application/platform.
+
+SOAP envelope root element for every SOAP message and contains two child elements <Header>[Optional] element and mandatory <Body> element.
+
+What is WSDL?
+Contract of webservices description language.
+All the information send/receive into XML format as per WSDL define.
+WSDL is the Heart of SOAP webservices.
+
+In the XML file of WSDL we have binding and further dividing into Operations which will connect with type.
+
+For example : Calculate: ADD is operations and IntA[type] and IntB[type] will be the two inputs.
+
++++++++++REST+++++++++ This is the latest authorization and communication ++++++++++++++++
+
+Most of the org. moving into REST API's as SOAP is little complicated and dependent on single.
+
+**************REST webservices are secure and fast.***************
+
+XML or JSON will be use to send/receive the information.
+
+############90% we used JSON for REST API's. All the REST information will be define in API document.
+
+In API document we define minimum below to understand at list:
+API Name
+API Description
+API Version
+API Method ---- e.g. PUT, POST, GET or DELETE
+API Request
+API response
+
+We use a multi API to take the information from different API provider. e.g. google maps exposed rest api's information.
+A document should be available to understand the api's as above define.
+
+###############e.g. www.openweathermap.org.... ###################
+
+https://api.openweathermap.org/data/2.5/onecall?lat=28.645007&lon=77.086053&exclude=hourly&appid=6deb0a89b91fc6a965fb2ac1bbb65053
+
+part (optional parameter) : current
+minutely
+hourly
+daily
+
+http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
+http://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=6deb0a89b91fc6a965fb2ac1bbb65053
+
+API Key :  6deb0a89b91fc6a965fb2ac1bbb65053
+Most of the API provider will be free upto 50 hits for single IP address per 60 seconds. It will be good to use it very less.
+
+CRUD Operations:
+
+create:POST ---- Sending something to save while doing operation
+read: GET  ------ Receive something from the operation
+update: PUT  ----- Put updating the the information for e.g. email or password updating
+delete: DELETE  ---- Deleting something from the operation 
+
+*******Gherkin is plain-text language with a little extra structure designed to be easy to learn by non-programmers.
+Feature: Account Holder withdraws cash
+
+  Scenario: Account has sufficient funds
+   Given the account balance is $100
+     And the card is valid
+     And the machine contains enough money  
+    When the Account Holder requests $20
+    Then the ATM should dispense $20
+     And the account balance should be $80
+     And the card should be returned
+	 
+	 247 mm x 170 mm x 8.5 mm (9.7" x 6.7" x 0.3")
+$$$$$$$$$$$$$$$$$$$$$ Automation API Testing ###################	 
+End point: Address where API is hosted on the Server.
+
+HTTP methods which are commonly used to communicate with Rest API’s are
+
+GET, POST, PUT, and DELETE
+
+GET- The GET method is used to extract information from the given server using a given URI. While using GET request, it should only extract data and should have no other effect on the data. No Payload/Body required
+
+How to send input data in GET?
+Ans: Using Query Parameters
+
+POST- A POST request is used to send data to the server, for example, customer information, file upload, etc. using HTML forms.
+
+How to send input data in POST?
+Ans: Using Form Parameters /Body Payload
+
+PUT- Replaces all current representations of the target resource with the uploaded content.
+
+DELETE- Removes all current representations of the target resource given by a URI.
+
+Resources:
+Resources represent API/Collection which can be accessed from the Server
+
+Google.com/maps
+google.com/search
+google.com/images
+
+
+Path Parameters:
+Path parameters are variable parts of a URL path. They are typically used to point to a specific resource within a collection, such as a user identified by ID
+
+https://www.google.com/Images/1123343
+https://www.google.com/docs/1123343
+https://amazon.com/orders/112
+
+https://www.google.com/search?q=newyork&oq=newyork&aqs=chrome..69i57j0l7.2501j0j7&sourceid=chrome&ie=UTF-8
+
+Query Parameters:
+Query Parameter is used to sort/filter the resources.
+
+Query Parameters are identified with?””
+
+https://amazon.com/orders?sort_by=2/20/2020
+
+Headers/Cookies:
+
+SessionFilter object will drive the whole class to execute.
+PathParam();
+How to Create Session Filter for Authentications in Rest Assured Automation in Introducing Path Parameters and Query Parameters together Single Test Sending Files as Attachemnts using Rest Assured with Multipart method Parsing comples Json and limiting Json response through Query Parameters and handling HTTPS Certification validation throught Automated Code.
+
+Curl command is use to attachment. 
+curl -D- -u admin:admin -X POST -H "X-Atlassian-Token: no-check" -F "file=@myfile.txt" http://myhost/rest/api/2/issue/TEST-123/attachments
+
+Headers represent the meta-data associated with the API request and response. In layman terms, we were sending Additional details to API to process our request.
+Example : Authorization details
+
+End Point Request URL can be constructed as below
+Base URL/resource/(Query/Path)Parameters
+
+Hello123
+824502
+824502
